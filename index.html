@@ -3,25 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio Profesional | Clairine Anargya Athallah - Sains Data</title>
-  <meta name="description" content="Portofolio Web Profesional Clairine Anargya Athallah - Mahasiswi S1 Sains Data Telkom University Surabaya. Fokus pada Machine Learning, NLP, dan Data Analytics." />
+  <title>Portofolio | CLAIRINE ANARGYA ATHALLAH</title>
+  <meta name="description" content="Portofolio Resmi Clairine Anargya Athallah - Mahasiswi S1 Sains Data Telkom University Surabaya. Fokus pada Machine Learning, Natural Language Processing, dan Data Governance." />
+  
+  <!-- Favicon / Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600;1,700;1,800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg-dark: #060d1a;
-      --bg-card: rgba(11, 23, 44, 0.75);
-      --bg-card-hover: rgba(16, 32, 60, 0.9);
-      --primary: #1d4ed8;
-      --primary-light: #38bdf8;
-      --accent: #00f5d4;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --text-dim: #64748b;
-      --border: rgba(56, 189, 248, 0.18);
-      --border-glow: rgba(56, 189, 248, 0.45);
-      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --bg-white: #ffffff;
+      --bg-light: #ffffff;
+      --bg-card: #ffffff;
+      --primary-blue: #2273f3;
+      --primary-blue-dark: #1a5ac2;
+      --primary-blue-light: #eff6ff;
+      --primary-blue-border: #bfdbfe;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --text-dark: #0f172a;
+      --border-color: #e2e8f0;
+      --border-accent: rgba(34, 115, 243, 0.25);
+      --shadow-sm: 0 2px 8px rgba(34, 115, 243, 0.04);
+      --shadow-md: 0 8px 30px rgba(34, 115, 243, 0.08);
+      --shadow-hover: 0 16px 40px rgba(34, 115, 243, 0.14);
+      
+      --font-display-serif: 'Playfair Display', Georgia, serif;
+      --font-heading-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
     }
 
@@ -29,1351 +39,2096 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
       scroll-behavior: smooth;
     }
 
     body {
-      background-color: var(--bg-dark);
+      background-color: var(--bg-white);
       color: var(--text-main);
-      font-family: var(--font-sans);
-      line-height: 1.6;
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.65;
       overflow-x: hidden;
-      background-image: 
-        radial-gradient(circle at 15% 15%, rgba(29, 78, 216, 0.18) 0%, transparent 40%),
-        radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.12) 0%, transparent 45%),
-        radial-gradient(circle at 50% 85%, rgba(0, 245, 212, 0.08) 0%, transparent 50%);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Selection */
+    ::selection {
+      background: var(--primary-blue);
+      color: #ffffff;
     }
 
     /* Container */
     .container {
       width: 100%;
-      max-width: 1200px;
+      max-width: 1240px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 2rem;
     }
 
-    /* Navbar */
+    /* Navigation Bar */
     .navbar {
-      position: fixed;
+      position: sticky;
       top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: rgba(6, 13, 26, 0.85);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      z-index: 100;
       transition: all 0.3s ease;
     }
 
     .nav-inner {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
-      height: 70px;
+      padding: 1.1rem 0;
     }
 
-    .brand {
+    .nav-brand {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 0.5rem;
       text-decoration: none;
-      color: var(--text-main);
+      font-family: var(--font-heading-sans);
       font-weight: 800;
-      font-size: 1.1rem;
-      letter-spacing: -0.02em;
-    }
-
-    .brand-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 10px var(--accent);
-      animation: pulse 2s infinite;
+      font-size: 1.05rem;
+      color: var(--primary-blue);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 1.5rem;
       list-style: none;
     }
 
     .nav-links a {
-      color: var(--text-muted);
       text-decoration: none;
+      color: var(--text-main);
+      font-weight: 600;
       font-size: 0.92rem;
-      font-weight: 500;
       transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--primary-light);
-    }
-
-    .btn-nav-cv {
-      background: linear-gradient(135deg, #1d4ed8, #0284c7);
-      color: #fff !important;
-      padding: 8px 18px;
-      border-radius: 8px;
-      font-weight: 600 !important;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: transform 0.2s, box-shadow 0.2s !important;
-    }
-
-    .btn-nav-cv:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
-    }
-
-    /* Hero Section */
-    .hero {
-      padding-top: 130px;
-      padding-bottom: 80px;
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
       position: relative;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.25fr 1fr;
-      gap: 40px;
-      align-items: center;
+    .nav-links a:hover {
+      color: var(--primary-blue);
     }
 
-    .hero-badge {
+    .nav-cta {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      border-radius: 30px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--primary-light);
-      margin-bottom: 20px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+      gap: 0.5rem;
+      background: var(--primary-blue);
+      color: #ffffff !important;
+      padding: 0.6rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(34, 115, 243, 0.25);
     }
 
-    .hero-title {
-      font-size: 2.8rem;
+    .nav-cta:hover {
+      background: var(--primary-blue-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(34, 115, 243, 0.35);
+    }
+
+    /* Mobile Nav Toggle */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--primary-blue);
+      cursor: pointer;
+    }
+
+    /* HERO SECTION */
+    .hero-section {
+      padding: 3.5rem 0 5rem;
+      background: #ffffff;
+      position: relative;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-title-serif {
+      font-family: var(--font-display-serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(3.8rem, 8vw, 6.5rem);
+      line-height: 1.05;
+      color: var(--primary-blue);
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-title-name {
+      font-family: var(--font-heading-sans);
       font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -0.03em;
-      margin-bottom: 12px;
-      background: linear-gradient(135deg, #ffffff 40%, var(--primary-light) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: clamp(1.8rem, 4.6vw, 3.8rem);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      color: var(--primary-blue);
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      word-break: break-word;
     }
 
-    .hero-role {
-      font-size: 1.2rem;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 18px;
-      font-family: var(--font-mono);
+    /* Hero Two-Column Grid */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 4rem;
+      align-items: center;
     }
 
-    .hero-desc {
-      font-size: 1.05rem;
+    /* Left: Hero Photo Container */
+    .hero-photo-container {
+      position: relative;
+      width: 300px;
+    }
+
+    .hero-photo-frame {
+      width: 100%;
+      aspect-ratio: 4 / 6;
+      background: #c8d1d9;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+
+    .hero-photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.5s ease;
+    }
+
+    .hero-photo-frame:hover img {
+      transform: scale(1.03);
+    }
+
+    /* Rosette Badges Motif (Canva Element) */
+    .rosette-badges-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.15rem;
+      margin-top: -32px;
+      margin-left: 0;
+      position: relative;
+      z-index: 10;
+    }
+
+    .rosette-badge-img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #ffffff;
+      padding: 3px;
+      box-shadow: 0 4px 15px rgba(34, 115, 243, 0.15);
+      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .rosette-badge-img:hover {
+      transform: rotate(180deg) scale(1.1);
+      box-shadow: 0 8px 25px rgba(34, 115, 243, 0.3);
+    }
+
+    /* Right: Hero Narrative */
+    .hero-content {
+      padding-top: 0.5rem;
+    }
+
+    .role-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      background: var(--primary-blue-light);
+      color: var(--primary-blue);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      border-radius: 9999px;
+      border: 1px solid var(--primary-blue-border);
+      margin-bottom: 1.25rem;
+    }
+
+    .role-badge svg {
+      flex-shrink: 0;
+    }
+
+    .hero-content h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.35;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-content p {
       color: var(--text-muted);
-      margin-bottom: 30px;
-      max-width: 580px;
+      font-size: 1.05rem;
       line-height: 1.7;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .meta-pill {
+      background: #f1f5f9;
+      color: var(--text-main);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.4rem 0.85rem;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
     }
 
     .hero-actions {
       display: flex;
-      gap: 14px;
       flex-wrap: wrap;
-      margin-bottom: 40px;
-    }
-
-    .btn {
-      display: inline-flex;
+      gap: 1rem;
       align-items: center;
-      gap: 8px;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: all 0.25s ease;
-      cursor: pointer;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
-      color: #fff;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 4px 20px rgba(14, 165, 233, 0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--primary-blue);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.85rem 1.6rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 15px rgba(34, 115, 243, 0.25);
     }
 
     .btn-primary:hover {
+      background: var(--primary-blue-dark);
       transform: translateY(-2px);
-      box-shadow: 0 6px 25px rgba(14, 165, 233, 0.5);
+      box-shadow: 0 8px 25px rgba(34, 115, 243, 0.35);
     }
 
-    .btn-secondary {
-      background: rgba(15, 23, 42, 0.8);
-      color: var(--text-main);
-      border: 1px solid var(--border);
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #ffffff;
+      color: var(--primary-blue);
+      border: 1.5px solid var(--primary-blue);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.85rem 1.6rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.25s ease;
     }
 
-    .btn-secondary:hover {
-      background: rgba(56, 189, 248, 0.12);
-      border-color: var(--primary-light);
-      color: var(--primary-light);
+    .btn-outline:hover {
+      background: var(--primary-blue-light);
       transform: translateY(-2px);
     }
 
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
+    /* SECTION GENERAL STYLES */
+    section {
+      padding: 5.5rem 0;
+      position: relative;
     }
 
-    .stat-item h4 {
-      font-size: 1.5rem;
+    .section-header-canva {
+      margin-bottom: 3.5rem;
+    }
+
+    .section-title-canva {
+      font-family: var(--font-heading-sans);
       font-weight: 800;
-      color: var(--primary-light);
-      font-family: var(--font-mono);
-    }
-
-    .stat-item p {
-      font-size: 0.8rem;
-      color: var(--text-dim);
+      font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+      letter-spacing: -0.01em;
+      color: var(--primary-blue);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
     }
 
-    /* 3D Lanyard ID Card Visual */
-    .lanyard-container {
-      display: flex;
-      flex-direction: column;
+    .section-desc-canva {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 680px;
+      line-height: 1.65;
+    }
+
+    /* SECTION: TENTANG SAYA */
+    .about-section {
+      border-top: 1px solid var(--border-color);
+      background: #ffffff;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
       align-items: center;
-      position: relative;
-      perspective: 1200px;
     }
 
-    /* Hanging strap */
-    .lanyard-strap {
-      width: 32px;
-      height: 90px;
-      background: repeating-linear-gradient(
-        0deg,
-        #0b1329,
-        #0b1329 12px,
-        #1d4ed8 12px,
-        #1d4ed8 14px
-      );
-      border-left: 2px solid rgba(56, 189, 248, 0.4);
-      border-right: 2px solid rgba(56, 189, 248, 0.4);
-      position: relative;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .about-narrative {
+      font-size: 1.05rem;
+      color: var(--text-main);
+      line-height: 1.8;
     }
 
-    .lanyard-strap::after {
-      content: "TELKOM UNIVERSITY";
-      writing-mode: vertical-rl;
-      font-family: var(--font-mono);
-      font-size: 7px;
-      letter-spacing: 2px;
-      color: rgba(255, 255, 255, 0.7);
+    .about-narrative p {
+      margin-bottom: 1.4rem;
+    }
+
+    .about-narrative strong {
+      color: var(--primary-blue-dark);
       font-weight: 700;
     }
 
-    /* Metal buckle / clip */
-    .lanyard-clip {
-      width: 44px;
-      height: 22px;
-      background: linear-gradient(180deg, #94a3b8 0%, #475569 50%, #1e293b 100%);
-      border-radius: 4px;
-      border: 1px solid #cbd5e1;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-      position: relative;
-      z-index: 2;
-    }
-
-    .lanyard-ring {
-      width: 14px;
-      height: 14px;
-      border: 2px solid #cbd5e1;
-      border-radius: 50%;
-      margin: -4px auto 0 auto;
-    }
-
-    /* The Badge / ID Card */
-    .id-card-wrapper {
-      position: relative;
-      width: 320px;
-      height: 480px;
-      transform-style: preserve-3d;
-      transition: transform 0.15s ease-out;
-      cursor: grab;
-      margin-top: -6px;
-    }
-
-    .id-card-wrapper:active {
-      cursor: grabbing;
-    }
-
-    .id-card {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(145deg, #0f1f3d 0%, #070e1d 100%);
-      border: 1.5px solid rgba(56, 189, 248, 0.35);
-      border-radius: 18px;
-      padding: 24px;
+    .about-focus-list {
+      list-style: none;
+      margin: 1.5rem 0;
       display: flex;
       flex-direction: column;
+      gap: 1rem;
+    }
+
+    .about-focus-item {
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+      background: #f8faff;
+      padding: 1rem 1.2rem;
+      border-radius: 8px;
+      border-left: 3px solid var(--primary-blue);
+    }
+
+    .about-focus-item span.icon {
+      display: inline-flex;
       align-items: center;
-      text-align: center;
-      box-shadow: 
-        0 20px 40px rgba(0, 0, 0, 0.7),
-        0 0 25px rgba(29, 78, 216, 0.25);
+      justify-content: center;
+      color: var(--primary-blue);
+      flex-shrink: 0;
+      margin-top: 0.2rem;
+    }
+
+    .about-focus-item div h4 {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.2rem;
+    }
+
+    .about-focus-item div p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+
+    /* Education Card (Right Column) */
+    .edu-card-wrap {
       position: relative;
-      overflow: hidden;
     }
 
-    .id-card::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(
-        45deg,
-        transparent 45%,
-        rgba(56, 189, 248, 0.1) 50%,
-        transparent 55%
-      );
-      pointer-events: none;
+    .edu-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2.2rem;
+      box-shadow: var(--shadow-md);
+      position: relative;
     }
 
-    .id-card-header {
-      width: 100%;
+    .edu-card-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(56, 189, 248, 0.2);
-      margin-bottom: 16px;
+      margin-bottom: 1.8rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #f1f5f9;
     }
 
-    .id-card-header span {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      letter-spacing: 1px;
-      color: var(--primary-light);
-      font-weight: 700;
+    .edu-card-header h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--primary-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
-    .id-card-photo-box {
-      width: 140px;
-      height: 140px;
-      border-radius: 14px;
-      padding: 3px;
-      background: linear-gradient(135deg, var(--primary-light), var(--accent));
-      box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
-      margin-bottom: 14px;
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
       position: relative;
     }
 
-    .id-card-photo {
-      width: 100%;
-      height: 100%;
-      border-radius: 11px;
-      object-fit: cover;
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 15px;
+      width: 2px;
+      background: #e2e8f0;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 2.8rem;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 7px;
+      top: 5px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 3px solid var(--primary-blue);
+      box-shadow: 0 0 0 3px rgba(34, 115, 243, 0.15);
+    }
+
+    .timeline-year {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      margin-bottom: 0.2rem;
+    }
+
+    .timeline-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.2rem;
+    }
+
+    .timeline-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Vertical Rosettes on right side of Edu Card */
+    .edu-rosettes-side {
+      position: absolute;
+      right: -25px;
+      top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 10;
+    }
+
+    .edu-rosettes-side img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #ffffff;
+      padding: 2px;
+      box-shadow: 0 4px 15px rgba(34, 115, 243, 0.15);
+      transition: transform 0.6s ease;
+    }
+
+    .edu-rosettes-side img:hover {
+      transform: rotate(90deg) scale(1.15);
+    }
+
+    /* SECTION: SKILLS & TOOLS */
+    .skills-section {
+      border-top: 1px solid var(--border-color);
+      background: var(--bg-light);
+    }
+
+    .skills-main-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .skills-categories {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+    }
+
+    .skill-box {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 1.6rem;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
+
+    .skill-box:hover {
+      border-color: var(--border-accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .skill-box-title {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      margin-bottom: 1rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .skill-tag {
+      background: #f1f5f9;
+      color: var(--text-main);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.35rem 0.8rem;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.2s ease;
+    }
+
+    .skill-tag:hover {
+      background: var(--primary-blue-light);
+      color: var(--primary-blue);
+      border-color: var(--primary-blue-border);
+    }
+
+    /* Tools Logo Grid */
+    .tools-logo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.15rem;
+    }
+
+    .tool-logo-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      padding: 1.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      transition: all 0.25s ease;
+    }
+
+    .tool-logo-card:hover {
+      border-color: var(--border-accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .tool-logo-card img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
       display: block;
     }
 
-    .photo-toggle-btn {
-      position: absolute;
-      bottom: -8px;
-      right: -8px;
-      background: #0f172a;
-      border: 1px solid var(--primary-light);
-      color: var(--primary-light);
-      border-radius: 20px;
-      font-size: 9px;
-      font-family: var(--font-mono);
-      padding: 2px 8px;
-      cursor: pointer;
+    .tool-logo-card span {
+      font-size: 0.85rem;
       font-weight: 700;
-    }
-
-    .id-card-name {
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 4px;
-    }
-
-    .id-card-title {
-      font-size: 0.8rem;
-      color: var(--accent);
-      font-weight: 600;
-      font-family: var(--font-mono);
-      margin-bottom: 12px;
-    }
-
-    .id-card-meta {
-      width: 100%;
-      background: rgba(6, 13, 26, 0.6);
-      border: 1px solid rgba(56, 189, 248, 0.15);
-      border-radius: 8px;
-      padding: 10px;
-      font-size: 0.78rem;
-      text-align: left;
-      margin-bottom: 12px;
-      font-family: var(--font-mono);
-    }
-
-    .id-card-meta div {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 4px;
-    }
-
-    .id-card-meta div:last-child {
-      margin-bottom: 0;
-    }
-
-    .id-card-meta span:first-child {
-      color: var(--text-dim);
-    }
-
-    .id-card-meta span:last-child {
-      color: #e2e8f0;
-      font-weight: 600;
-    }
-
-    .id-card-barcode {
-      width: 100%;
-      height: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 3px;
-      opacity: 0.7;
-    }
-
-    .barcode-line {
-      height: 100%;
-      background: #38bdf8;
-    }
-
-    .lanyard-hint {
-      margin-top: 14px;
-      font-size: 0.75rem;
-      color: var(--text-dim);
-      font-family: var(--font-mono);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    /* Section Headers */
-    .section {
-      padding: 80px 0;
-      position: relative;
-    }
-
-    .section-header {
+      color: var(--text-dark);
       text-align: center;
-      margin-bottom: 50px;
     }
 
-    .section-badge {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent);
-      margin-bottom: 10px;
-      font-family: var(--font-mono);
+    /* SECTION: FEATURED PROJECTS */
+    .projects-section {
+      border-top: 1px solid var(--border-color);
+      background: #ffffff;
     }
 
-    .section-title {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 14px;
-      letter-spacing: -0.02em;
-    }
-
-    .section-desc {
-      font-size: 1rem;
-      color: var(--text-muted);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* About Section */
-    .about-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 36px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 36px;
-      backdrop-filter: blur(12px);
-    }
-
-    .about-text h3 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 16px;
-    }
-
-    .about-text p {
-      color: var(--text-muted);
-      margin-bottom: 16px;
-      font-size: 0.95rem;
-      line-height: 1.7;
-    }
-
-    .edu-timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .edu-item {
-      padding: 20px;
-      background: rgba(6, 13, 26, 0.5);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      border-left: 4px solid var(--primary-light);
-    }
-
-    .edu-item h4 {
-      font-size: 1.1rem;
-      color: #fff;
-      font-weight: 700;
-    }
-
-    .edu-item .edu-sub {
-      color: var(--accent);
-      font-size: 0.88rem;
-      font-weight: 600;
-      margin-bottom: 6px;
-      font-family: var(--font-mono);
-    }
-
-    .edu-item p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    /* Project Filters */
-    .filter-bar {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 36px;
-    }
-
-    .filter-btn {
-      padding: 8px 18px;
-      border-radius: 30px;
-      background: rgba(15, 23, 42, 0.6);
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .filter-btn.active, .filter-btn:hover {
-      background: var(--primary);
-      color: #fff;
-      border-color: var(--primary-light);
-    }
-
-    /* Projects Grid */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
     }
 
     .project-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
-      position: relative;
-      overflow: hidden;
     }
 
     .project-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--primary-light);
-      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
-      background: var(--bg-card-hover);
+      border-color: var(--border-accent);
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
     }
 
-    .project-category {
-      font-family: var(--font-mono);
+    .project-thumb-wrap {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      cursor: zoom-in;
+    }
+
+    .project-thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 0.5rem;
+      transition: transform 0.4s ease;
+    }
+
+    .project-thumb-wrap.cover img {
+      object-fit: cover;
+      object-position: top center;
+      padding: 0;
+    }
+
+    .project-card:hover .project-thumb-wrap img {
+      transform: scale(1.04);
+    }
+
+    /* Lightbox Modal for Project Outputs */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      z-index: 999;
+    }
+
+    .lightbox-modal.open {
+      display: flex;
+    }
+
+    .lightbox-inner {
+      position: relative;
+      max-width: 1000px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+      text-align: center;
+    }
+
+    .lightbox-inner img {
+      max-width: 100%;
+      max-height: 78vh;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .lightbox-iframe {
+      width: 100%;
+      height: 76vh;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      display: none;
+      background: #020617;
+    }
+
+    .lightbox-caption-bar {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 0 0.25rem;
+    }
+
+    .lightbox-caption {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .lightbox-external-link {
+      display: none;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      text-decoration: none;
+    }
+
+    .lightbox-external-link:hover {
+      text-decoration: underline;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -14px;
+      right: -14px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: none;
+      background: var(--primary-blue);
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.65rem;
+    }
+
+    .project-card-badge {
+      background: var(--primary-blue-light);
+      color: var(--primary-blue);
       font-size: 0.72rem;
       font-weight: 700;
-      color: var(--accent);
+      padding: 0.22rem 0.65rem;
+      border-radius: 9999px;
+      border: 1px solid var(--primary-blue-border);
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    .project-card-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
 
     .project-title {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 0.6rem;
+      line-height: 1.35;
+    }
+
+    .project-role {
+      font-size: 0.82rem;
       font-weight: 700;
-      color: #fff;
-      margin-bottom: 10px;
+      color: var(--primary-blue);
+      margin-bottom: 0.6rem;
+      display: inline-block;
     }
 
     .project-desc {
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       color: var(--text-muted);
       line-height: 1.6;
-      margin-bottom: 18px;
-    }
-
-    .project-highlight {
-      background: rgba(56, 189, 248, 0.08);
-      border-left: 3px solid var(--primary-light);
-      padding: 10px 14px;
-      border-radius: 4px;
-      font-size: 0.82rem;
-      color: #e2e8f0;
-      margin-bottom: 18px;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
     }
 
     .project-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 20px;
+      gap: 0.4rem;
+      margin-bottom: 1.2rem;
     }
 
-    .tag {
+    .project-tag {
+      background: #f8faff;
+      color: var(--primary-blue-dark);
       font-family: var(--font-mono);
-      font-size: 0.72rem;
-      padding: 4px 10px;
-      background: rgba(15, 23, 42, 0.6);
-      border: 1px solid rgba(56, 189, 248, 0.2);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
       border-radius: 4px;
-      color: var(--primary-light);
+      border: 1px solid var(--primary-blue-border);
     }
 
     .project-links {
       display: flex;
-      gap: 12px;
-      padding-top: 14px;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid #f1f5f9;
     }
 
-    .project-link-btn {
+    .project-btn {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--primary-light);
-      text-decoration: none;
-      transition: color 0.2s;
+      gap: 0.4rem;
+      transition: gap 0.2s ease, color 0.2s ease;
     }
 
-    .project-link-btn:hover {
-      color: #fff;
+    .project-btn:hover {
+      color: var(--primary-blue-dark);
+      gap: 0.6rem;
     }
 
-    /* Skills Grid */
-    .skills-grid {
+    /* SECTION: HONORS & PEKAN ILMIAH */
+    .honors-section {
+      border-top: 1px solid var(--border-color);
+      background: var(--bg-light);
+    }
+
+    .honors-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
     }
 
-    .skill-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
+    .honor-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
       border-radius: 12px;
-      padding: 24px;
-      transition: transform 0.2s;
-    }
-
-    .skill-card:hover {
-      transform: translateY(-3px);
-      border-color: var(--primary-light);
-    }
-
-    .skill-icon {
-      font-size: 1.8rem;
-      margin-bottom: 12px;
-    }
-
-    .skill-card h4 {
-      font-size: 1rem;
-      color: #fff;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .skill-card ul {
-      list-style: none;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.8;
-    }
-
-    .skill-card li::before {
-      content: "▹";
-      color: var(--accent);
-      margin-right: 6px;
-    }
-
-    /* CTA / Contact Section */
-    .cta-card {
-      background: linear-gradient(135deg, rgba(29, 78, 216, 0.2) 0%, rgba(11, 23, 44, 0.9) 100%);
-      border: 1.5px solid var(--primary-light);
-      border-radius: 20px;
-      padding: 50px 30px;
-      text-align: center;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    }
-
-    .cta-card h2 {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 14px;
-    }
-
-    .cta-card p {
-      color: var(--text-muted);
-      max-width: 600px;
-      margin: 0 auto 30px auto;
-      font-size: 1.05rem;
-    }
-
-    .cta-buttons {
+      padding: 1.6rem;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
       display: flex;
-      justify-content: center;
-      gap: 16px;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .honor-card:hover {
+      border-color: var(--border-accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+
+    .honor-badge-year {
+      align-self: flex-start;
+      background: var(--primary-blue-light);
+      color: var(--primary-blue);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.85rem;
+    }
+
+    .honor-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 0.4rem;
+      line-height: 1.35;
+    }
+
+    .honor-inst {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      margin-bottom: 0.6rem;
+    }
+
+    .honor-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* SECTION: ORGANIZATIONAL & LEADERSHIP */
+    .org-section {
+      border-top: 1px solid var(--border-color);
+      background: #ffffff;
+    }
+
+    .org-header-canva {
+      display: flex;
+      align-items: center;
       flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
     }
 
-    /* Footer */
-    footer {
-      padding: 40px 0;
-      text-align: center;
-      border-top: 1px solid var(--border);
-      color: var(--text-dim);
+    .org-rosettes-left {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .org-rosettes-left img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #ffffff;
+      padding: 2px;
+      box-shadow: 0 3px 12px rgba(34, 115, 243, 0.12);
+      transition: transform 0.6s ease;
+    }
+
+    .org-rosettes-left img:hover {
+      transform: rotate(180deg);
+    }
+
+    .org-serif-title {
+      font-family: var(--font-display-serif);
+      font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+      color: var(--text-dark);
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .org-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .org-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.8rem;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    .org-card:hover {
+      border-color: var(--border-accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .org-icon-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: var(--primary-blue-light);
+      color: var(--primary-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .org-content h4 {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .org-role-inst {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .org-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* SECTION: MARI BERKOLABORASI & CONTACT */
+    .contact-section {
+      border-top: 1px solid var(--border-color);
+      background: var(--bg-light);
+      padding-bottom: 6rem;
+    }
+
+    .collab-header-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3.5rem;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .collab-titles {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .collab-title-serif {
+      font-family: var(--font-display-serif);
+      font-style: italic;
+      font-size: clamp(3rem, 6vw, 4.5rem);
+      line-height: 1.1;
+      color: var(--primary-blue);
+    }
+
+    .collab-title-bold {
+      font-family: var(--font-heading-sans);
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 4.2rem);
+      line-height: 1.05;
+      color: var(--primary-blue);
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+    }
+
+    .collab-rosettes-right {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .collab-rosettes-right img {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #ffffff;
+      padding: 3px;
+      box-shadow: 0 4px 15px rgba(34, 115, 243, 0.15);
+      transition: transform 0.8s ease;
+    }
+
+    .collab-rosettes-right img:hover {
+      transform: rotate(180deg) scale(1.1);
+    }
+
+    .collab-main-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .collab-banner-frame {
+      width: 100%;
+      height: 340px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+    }
+
+    .collab-banner-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .contact-details-box {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    .contact-info-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .contact-label {
+      font-family: var(--font-heading-sans);
       font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.85); }
+    .contact-value {
+      font-size: 1.05rem;
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
     }
 
-    /* Responsive */
-    @media (max-width: 900px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      .hero-desc {
-        margin: 0 auto 30px auto;
-      }
-      .hero-actions {
-        justify-content: center;
-      }
-      .hero-stats {
+    .contact-value a {
+      color: var(--primary-blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-value a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #f1f5f9;
+      color: var(--text-dark);
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 0.6rem 1.1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 1px solid #e2e8f0;
+      transition: all 0.2s ease;
+    }
+
+    .social-btn:hover {
+      background: var(--primary-blue);
+      color: #ffffff;
+      border-color: var(--primary-blue);
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border-color);
+      background: #ffffff;
+      padding: 2.5rem 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--primary-blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* BACK TO TOP BUTTON */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--primary-blue);
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 4px 15px rgba(34, 115, 243, 0.3);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 99;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--primary-blue-dark);
+      transform: translateY(-3px);
+    }
+
+    /* RESPONSIVE BREAKPOINTS */
+    @media (max-width: 1024px) {
+      .projects-grid, .honors-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-      .about-card {
+      .hero-grid, .about-grid, .skills-main-grid, .collab-main-grid {
         grid-template-columns: 1fr;
+        gap: 2.5rem;
       }
-      .projects-grid {
-        grid-template-columns: 1fr;
+      .edu-rosettes-side {
+        display: none;
       }
-      .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .tools-logo-grid {
+        grid-template-columns: repeat(3, 1fr);
       }
+    }
+
+    @media (max-width: 768px) {
       .nav-links {
         display: none;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .hero-section {
+        padding: 2rem 0 3.5rem;
+      }
+      .hero-photo-container {
+        width: 100%;
+        max-width: 260px;
+      }
+      .rosette-badges-row {
+        gap: 0.8rem;
+        margin-top: -27px;
+      }
+      .rosette-badge-img {
+        width: 54px;
+        height: 54px;
+      }
+      .projects-grid, .honors-grid, .org-grid {
+        grid-template-columns: 1fr;
+      }
+      .collab-header-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .collab-rosettes-right {
+        margin-top: 1rem;
+      }
+      .section-header-canva {
+        margin-bottom: 3.5rem;
+      }
+
+      .collab-banner-frame {
+        height: 240px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .tools-logo-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
     <div class="container nav-inner">
-      <a href="#" class="brand">
-        <div class="brand-dot"></div>
-        <span>CLAIRINE ANARGYA</span>
-      </a>
       <ul class="nav-links">
         <li><a href="#about">Tentang</a></li>
+        <li><a href="#skills">Skills & Tools</a></li>
         <li><a href="#projects">Proyek</a></li>
-        <li><a href="#skills">Keahlian</a></li>
-        <li><a href="#publications">Publikasi</a></li>
+        <li><a href="#honors">Kompetisi</a></li>
+        <li><a href="#organization">Organisasi</a></li>
         <li><a href="#contact">Kontak</a></li>
-        <li><a href="./assets/CV_ATS_Clairine_Anargya.docx" download class="btn-nav-cv">Unduh CV ATS</a></li>
+        <li><a href="assets/CV_ATS_Clairine_Anargya.docx" class="nav-cta" download>Unduh CV</a></li>
       </ul>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">☰</button>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="container hero-grid">
-      
-      <!-- Left: Introduction -->
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span>●</span> Terbuka untuk Kerja Praktik / Magang 2025
+  <!-- HERO SECTION -->
+  <header class="hero-section" id="hero">
+    <div class="container">
+      <h1 class="hero-title-serif">Portofolio</h1>
+      <h2 class="hero-title-name">CLAIRINE ANARGYA ATHALLAH</h2>
+
+      <div class="hero-grid">
+        <!-- Left Column: Formal Photo Frame & Canva Rosette Badges -->
+        <div class="hero-photo-container">
+          <div class="hero-photo-frame">
+            <img src="assets/formal.jpeg" alt="Foto Formal Clairine Anargya Athallah" />
+          </div>
+          <!-- 3 Canva Optical Rosette Badges Overlapping Frame -->
+          <div class="rosette-badges-row">
+            <img src="assets/rosette_1.png" alt="Badge Optical Wave 1" class="rosette-badge-img" title="Rotasi Badges Canva" />
+            <img src="assets/rosette_2.png" alt="Badge Optical Mosaic 2" class="rosette-badge-img" title="Rotasi Badges Canva" />
+            <img src="assets/rosette_3.png" alt="Badge Optical Spiral 3" class="rosette-badge-img" title="Rotasi Badges Canva" />
+          </div>
         </div>
-        <h1 class="hero-title">Hai, saya Clairine Anargya Athallah 👋</h1>
-        <div class="hero-role">&lt;Data Science &amp; Machine Learning Enthusiast /&gt;</div>
-        <p class="hero-desc">
-          Mahasiswi S1 Sains Data Semester 5 Telkom University Surabaya. Berfokus pada <b>Applied Machine Learning</b>, <b>NLP</b>, dan <b>Data Storytelling</b>. Terbiasa membangun model prediktif, mengolah data tabular/teks, dan siap berkontribusi nyata di industri korporasi &amp; BUMN.
+
+        <!-- Right Column: Minimalist Narrative & CTA -->
+        <div class="hero-content">
+          <div class="role-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 3v18h18"/>
+              <path d="m19 9-5 5-4-4-3 3"/>
+            </svg>
+            Data Science &amp; Analytics
+          </div>
+          <h2>Mengolah Data Mentah Menjadi Solusi Cerdas yang Terstruktur & Berdampak</h2>
+          <p>
+            Berfokus pada pengembangan model Machine Learning terapan, Natural Language Processing (NLP), Decision Support System (DSS), serta tata kelola data berstandar internasional (DAMA-DMBOK).
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary">
+              Jelajahi Proyek ➔
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION: TENTANG SAYA -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-header-canva">
+        <h2 class="section-title-canva">TENTANG SAYA</h2>
+        <p class="section-desc-canva">
+          Sekilas latar belakang pendidikan dan bidang data yang sedang saya tekuni.
         </p>
-        
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">
-            🚀 Lihat Portofolio Proyek
-          </a>
-          <a href="./assets/CV_ATS_Clairine_Anargya.docx" download class="btn btn-secondary">
-            📄 Unduh CV ATS (DOCX)
-          </a>
-          <a href="https://www.linkedin.com/in/clairine-anargya-athallah-6915b6331/" target="_blank" class="btn btn-secondary">
-            💼 LinkedIn
-          </a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="stat-item">
-            <h4>14+</h4>
-            <p>Proyek Riset</p>
-          </div>
-          <div class="stat-item">
-            <h4>3</h4>
-            <p>Konferensi / KTI</p>
-          </div>
-          <div class="stat-item">
-            <h4>16</h4>
-            <p>Repositori</p>
-          </div>
-          <div class="stat-item">
-            <h4>Sem. 5</h4>
-            <p>Telkom Univ</p>
-          </div>
-        </div>
       </div>
 
-      <!-- Right: Interactive 3D Hanging ID Card -->
-      <div class="lanyard-container">
-        <div class="lanyard-strap"></div>
-        <div class="lanyard-clip">
-          <div class="lanyard-ring"></div>
-        </div>
-
-        <div class="id-card-wrapper" id="idCard">
-          <div class="id-card">
-            <div class="id-card-header">
-              <span>TELKOM UNIVERSITY</span>
-              <span>2024 - 2026</span>
-            </div>
-
-            <div class="id-card-photo-box">
-              <img src="./assets/photo.jpg" alt="Foto Clairine Anargya" class="id-card-photo" id="cardPhotoImg" />
-              <button class="photo-toggle-btn" id="togglePhotoBtn" title="Ganti ke avatar ilustrasi">MODE ILUSTRASI</button>
-            </div>
-
-            <h3 class="id-card-name">Clairine Anargya</h3>
-            <div class="id-card-title">DATA SCIENCE INTERN</div>
-
-            <div class="id-card-meta">
-              <div>
-                <span>NIM:</span>
-                <span>103102400031</span>
-              </div>
-              <div>
-                <span>Program:</span>
-                <span>S1 Sains Data</span>
-              </div>
-              <div>
-                <span>Lokasi:</span>
-                <span>Surabaya, Jawa Timur</span>
-              </div>
-              <div>
-                <span>Status:</span>
-                <span style="color:#00f5d4">● ACTIVE CANDIDATE</span>
-              </div>
-            </div>
-
-            <!-- Barcode simulation -->
-            <div class="id-card-barcode">
-              <div class="barcode-line" style="width: 2px;"></div>
-              <div class="barcode-line" style="width: 4px;"></div>
-              <div class="barcode-line" style="width: 1px;"></div>
-              <div class="barcode-line" style="width: 3px;"></div>
-              <div class="barcode-line" style="width: 2px;"></div>
-              <div class="barcode-line" style="width: 5px;"></div>
-              <div class="barcode-line" style="width: 1px;"></div>
-              <div class="barcode-line" style="width: 4px;"></div>
-              <div class="barcode-line" style="width: 2px;"></div>
-              <div class="barcode-line" style="width: 3px;"></div>
-              <div class="barcode-line" style="width: 1px;"></div>
-              <div class="barcode-line" style="width: 4px;"></div>
-              <div class="barcode-line" style="width: 2px;"></div>
-              <div class="barcode-line" style="width: 5px;"></div>
-              <div class="barcode-line" style="width: 3px;"></div>
-              <div class="barcode-line" style="width: 1px;"></div>
-              <div class="barcode-line" style="width: 4px;"></div>
-              <div class="barcode-line" style="width: 2px;"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="lanyard-hint">
-          <span>✨</span> Gerakkan kursor untuk efek tilt 3D kartu
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Profil &amp; Rekam Akademik</div>
-        <h2 class="section-title">Tentang Saya</h2>
-        <p class="section-desc">Mengkombinasikan ketajaman analisis statistik dengan rekayasa Machine Learning modern.</p>
-      </div>
-
-      <div class="about-card">
-        <div class="about-text">
-          <h3>Profil Profesional</h3>
+      <div class="about-grid">
+        <!-- Left: Bio Narrative -->
+        <div class="about-narrative">
           <p>
-            Saya adalah mahasiswi program studi <b>Sains Data di Telkom University Surabaya</b> yang memiliki antusiasme tinggi dalam menerjemahkan data mentah menjadi keputusan bisnis yang berdampak.
+            Saya <strong>Clairine Anargya Athallah</strong>, mahasiswi S1 Sains Data di Telkom University Surabaya angkatan 2024 dan alumni <strong>SMAN 15 Surabaya</strong>. Ketertarikan saya di bidang data dimulai dari rasa ingin tahu tentang bagaimana data mentah bisa diolah menjadi informasi yang bermanfaat untuk mengambil keputusan.
           </p>
-          <p>
-            Berpengalaman dalam mengolah data terstruktur dan teks, menguji hipotesis dengan ekonometrika, serta mengimplementasikan model Machine Learning siap pakai (mulai dari evaluasi metrik presisi hingga REST API deployment).
-          </p>
-          <p>
-            Aktif mengikuti kompetisi tingkat nasional dan telah mempublikasikan artikel ilmiah di konferensi IPB University dan UNESA.
+          <p style="margin-bottom: 0;">
+            Selama kuliah, saya mengembangkan pemahaman lewat pengerjaan proyek mata kuliah, penyusunan karya ilmiah untuk kompetisi mahasiswa, serta keterlibatan dalam kepanitiaan dan pengabdian masyarakat.
           </p>
         </div>
 
-        <div class="edu-timeline">
-          <div class="edu-item">
-            <h4>Universitas Telkom Surabaya</h4>
-            <div class="edu-sub">S1 Sains Data (Fakultas Informatika) • 2024 – Sekarang</div>
-            <p>
-              <b>Mata Kuliah Utama:</b> Machine Learning, AutoML, Pengolahan Bahasa Alami (NLP), Visi Komputer, Big Data (PySpark/Hadoop), Ekonometrika &amp; Analisis Deret Waktu, Sistem Basis Data Relasional, Struktur Data &amp; Algoritma.
-            </p>
+        <!-- Right: Education Timeline Card (Canva Style) -->
+        <div class="edu-card-wrap">
+          <div class="edu-card">
+            <div class="edu-card-header">
+              <h3>Riwayat Pendidikan</h3>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2024 – SEKARANG</div>
+                <div class="timeline-title">Telkom University Surabaya</div>
+                <div class="timeline-subtitle">S1 Sains Data — Fakultas Informatika</div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2021 – 2024</div>
+                <div class="timeline-title">SMAN 15 Surabaya (Libels)</div>
+                <div class="timeline-subtitle">Peminatan Matematika dan Ilmu Pengetahuan Alam (MIPA)</div>
+              </div>
+            </div>
           </div>
 
-          <div class="edu-item">
-            <h4>SMAN 17 Surabaya</h4>
-            <div class="edu-sub">Jurusan MIPA • Lulus 2024</div>
-            <p>Aktif dalam organisasi kepemudaan, riset sains remaja, dan pembinaan olimpiade matematika/sains.</p>
+          <!-- Vertical Rosettes Motif -->
+          <div class="edu-rosettes-side">
+            <img src="assets/rosette_1.png" alt="Badge 1" />
+            <img src="assets/rosette_2.png" alt="Badge 2" />
+            <img src="assets/rosette_3.png" alt="Badge 3" />
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section class="section" id="projects">
+  <!-- SECTION: SKILLS & TOOLS -->
+  <section class="skills-section" id="skills">
     <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Hasil Karya Nyata</div>
-        <h2 class="section-title">Portofolio Proyek</h2>
-        <p class="section-desc">Kumpulan proyek analitik, model kecerdasan buatan, dan aplikasi komputasi yang pernah saya selesaikan.</p>
+      <div class="section-header-canva">
+        <h2 class="section-title-canva">SKILLS & TOOLS</h2>
+        <p class="section-desc-canva">
+          Beberapa skill dan tools yang sudah saya pelajari selama kuliah maupun pengerjaan proyek.
+        </p>
       </div>
 
-      <!-- Filters -->
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">Semua Proyek</button>
-        <button class="filter-btn" data-filter="ml">Machine Learning &amp; AI</button>
-        <button class="filter-btn" data-filter="data">Data Storytelling &amp; EDA</button>
-        <button class="filter-btn" data-filter="nlp">NLP &amp; Text Mining</button>
-        <button class="filter-btn" data-filter="app">Software &amp; API</button>
+      <div class="skills-main-grid">
+        <!-- Categories -->
+        <div class="skills-categories">
+          <div class="skill-box">
+            <div class="skill-box-title">
+              Machine Learning &amp; Artificial Intelligence
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Scikit-Learn</span>
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">AutoKeras</span>
+              <span class="skill-tag">Natural Language Processing (NLP)</span>
+              <span class="skill-tag">Naïve Bayes</span>
+              <span class="skill-tag">Random Forest</span>
+              <span class="skill-tag">Linear / Logistic Regression</span>
+              <span class="skill-tag">TF-IDF & Text Cleansing</span>
+              <span class="skill-tag">Model Evaluation & Cross-Validation</span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-box-title">
+              Pemrograman &amp; Pengolahan Data
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python (Pandas, NumPy, SciPy)</span>
+              <span class="skill-tag">SQL (PostgreSQL, MySQL)</span>
+              <span class="skill-tag">FastAPI & RESTful API</span>
+              <span class="skill-tag">PySpark (Big Data Basics)</span>
+              <span class="skill-tag">Web Crawling (BeautifulSoup)</span>
+              <span class="skill-tag">Git & GitHub Version Control</span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-box-title">
+              Tata Kelola Data &amp; Visualisasi (BI)
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">DAMA-DMBOK Framework</span>
+              <span class="skill-tag">Data Quality & Metadata Management</span>
+              <span class="skill-tag">Looker Studio (Dashboarding)</span>
+              <span class="skill-tag">Matplotlib & Seaborn</span>
+              <span class="skill-tag">Exploratory Data Analysis (EDA)</span>
+              <span class="skill-tag">Decision Support Systems (AHP/TOPSIS)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools Logo Grid -->
+        <div class="tools-logo-grid">
+          <div class="tool-logo-card">
+            <img src="assets/logos/python.svg" alt="Python" />
+            <span>Python</span>
+          </div>
+          <div class="tool-logo-card">
+            <img src="assets/logos/pandas.svg" alt="Pandas" />
+            <span>Pandas</span>
+          </div>
+          <div class="tool-logo-card">
+            <img src="assets/logos/numpy.svg" alt="NumPy" />
+            <span>NumPy</span>
+          </div>
+          <div class="tool-logo-card">
+            <img src="assets/logos/scikitlearn.svg" alt="Scikit-Learn" />
+            <span>Scikit-Learn</span>
+          </div>
+          <div class="tool-logo-card">
+            <img src="assets/logos/tensorflow.svg" alt="TensorFlow" />
+            <span>TensorFlow</span>
+          </div>
+          <div class="tool-logo-card">
+            <img src="assets/logos/postgresql.svg" alt="PostgreSQL / SQL" />
+            <span>SQL</span>
+          </div>
+          <div class="tool-logo-card">
+            <img src="assets/logos/fastapi.svg" alt="FastAPI" />
+            <span>FastAPI</span>
+          </div>
+          <div class="tool-logo-card">
+            <img src="assets/logos/jupyter.svg" alt="Jupyter Notebook" />
+            <span>Jupyter</span>
+          </div>
+          <div class="tool-logo-card">
+            <img src="assets/logos/git.svg" alt="Git" />
+            <span>Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: FEATURED PROJECTS -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-header-canva">
+        <h2 class="section-title-canva">FEATURED PROJECTS</h2>
+        <p class="section-desc-canva">
+          Proyek riset dan implementasi nyata yang telah saya kerjakan, lengkap dengan luaran model, dashboard, dan visualisasi hasilnya. Klik gambar untuk memperbesar.
+        </p>
       </div>
 
-      <!-- Grid -->
       <div class="projects-grid">
+        <!-- Project 1: TATUL (On Going) -->
+        <div class="project-card">
+          <div class="project-thumb-wrap" onclick="openLightbox('assets/projects/proj_tatul_gradcam.png', 'Riset TATUL (On Going) — Visualisasi Grad-CAM MobileNetV2 pada Citra Supermarket')">
+            <img src="assets/projects/proj_tatul_gradcam.png" alt="Visualisasi Grad-CAM Klasifikasi Kesegaran Buah" />
+          </div>
+          <div class="project-card-body">
+            <div class="project-meta-row">
+              <span class="project-role" style="margin-bottom:0;">Riset Tugas Akhir</span>
+              <span class="project-card-badge">On Going • TATUL</span>
+            </div>
+            <h3 class="project-title">Analisis Domain Gap Klasifikasi Kesegaran Buah &amp; Web Kamera</h3>
+            <p class="project-desc">
+              Riset berjalan mengenai penurunan akurasi model MobileNetV2 pada kondisi nyata supermarket dibandingkan dataset laboratorium, dilengkapi analisis Grad-CAM serta prototipe web kamera.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">MobileNetV2</span>
+              <span class="project-tag">Grad-CAM</span>
+              <span class="project-tag">Computer Vision</span>
+              <span class="project-tag">Prototipe Web</span>
+            </div>
+            <div class="project-links">
+              <a href="javascript:void(0)" onclick="openLightbox('assets/projects/proj_tatul_gradcam.png', 'Riset TATUL (On Going) — Visualisasi Grad-CAM MobileNetV2 pada Citra Supermarket')" class="project-btn">Lihat Output Grad-CAM ↗</a>
+            </div>
+          </div>
+        </div>
 
-        <!-- Project 1 -->
-        <div class="project-card" data-category="data">
-          <div>
-            <div class="project-category">Data Storytelling • Web Interactive</div>
+        <!-- Project 2: Born Below the Future Sea -->
+        <div class="project-card">
+          <div class="project-thumb-wrap cover" onclick="openWebModal('https://born-below-the-future-sea.vercel.app/', 'Born Below the Future Sea — Scroll di dalam untuk eksplorasi cerita')">
+            <img src="assets/projects/proj_born_below.png" alt="Born Below the Future Sea" />
+          </div>
+          <div class="project-card-body">
+            <div class="project-meta-row">
+              <span class="project-role" style="margin-bottom:0;">Climate Data Storytelling</span>
+              <span class="project-card-badge">Live Web</span>
+            </div>
             <h3 class="project-title">Born Below the Future Sea</h3>
             <p class="project-desc">
-              Platform visualisasi interaktif berbasis <i>scrollytelling</i> yang mengolah data satelit altimetri presisi tinggi selama 31 tahun (1993–2024) mengenai kenaikan air laut di Kepulauan Pasifik.
+              Platform web scrollytelling interaktif yang memvisualisasikan 31 tahun data satelit altimetri (1993–2024) mengenai kenaikan permukaan air laut di Kepulauan Pasifik.
             </p>
-            <div class="project-highlight">
-              🌊 <b>Sorotan:</b> Mengintegrasikan narasi visual imersif dengan data sains klimatologi real-time dan audio ambien.
-            </div>
             <div class="project-tags">
-              <span class="tag">TypeScript</span>
-              <span class="tag">Satellite Data</span>
-              <span class="tag">Vercel</span>
-              <span class="tag">Data Storytelling</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Scrollytelling</span>
+              <span class="project-tag">Climate Data</span>
+              <span class="project-tag">Vercel</span>
             </div>
-          </div>
-          <div class="project-links">
-            <a href="https://born-below-the-future-sea.vercel.app/" target="_blank" class="project-link-btn">🔗 Buka Live Demo ↗</a>
+            <div class="project-links">
+              <a href="https://born-below-the-future-sea.vercel.app/" target="_blank" class="project-btn">Buka Live Demo ➔</a>
+            </div>
           </div>
         </div>
 
-        <!-- Project 2 -->
-        <div class="project-card" data-category="ml">
-          <div>
-            <div class="project-category">Machine Learning • Healthcare Analytics</div>
-            <h3 class="project-title">Breast Cancer Classification: MLP vs Random Forest</h3>
+        <!-- Project 3: Dashboard Pelayanan Rawat Inap RS Jawa Timur -->
+        <div class="project-card">
+          <div class="project-thumb-wrap cover" onclick="openLightbox('assets/projects/proj_looker_rs.png', 'Dashboard Analisis Kapasitas & Pelayanan Rawat Inap RS Jawa Timur')">
+            <img src="assets/projects/proj_looker_rs.png" alt="Dashboard Looker Studio Rumah Sakit Jawa Timur" />
+          </div>
+          <div class="project-card-body">
+            <div class="project-meta-row">
+              <span class="project-role" style="margin-bottom:0;">Healthcare BI Analytics</span>
+              <span class="project-card-badge">Looker Studio</span>
+            </div>
+            <h3 class="project-title">Dashboard Pelayanan Rawat Inap RS Jawa Timur</h3>
             <p class="project-desc">
-              Studi benchmark komparatif menguji performa Multi-Layer Perceptron (Jaringan Saraf Tiruan) melawan Random Forest pada data klinis kanker payudara dengan hyperparameter tuning GridSearchCV.
+              Dashboard analitik untuk memantau kapasitas tempat tidur, tren Bed Occupancy Rate (BOR), proporsi masuk pasien, serta peta persebaran rumah sakit di Jawa Timur.
             </p>
-            <div class="project-highlight">
-              🎯 <b>Hasil:</b> Mencapai akurasi 97.4%, kurva ROC-AUC optimal, serta evaluasi matriks konfusi diagnostik klinis.
-            </div>
             <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Scikit-Learn</span>
-              <span class="tag">Neural Network</span>
-              <span class="tag">Pandas</span>
+              <span class="project-tag">Looker Studio</span>
+              <span class="project-tag">Data Visualization</span>
+              <span class="project-tag">Geospatial Map</span>
+              <span class="project-tag">BOR</span>
             </div>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Clairineanr/mlp-vs-random-forest-breast-cancer" target="_blank" class="project-link-btn">📦 Repositori GitHub ↗</a>
+            <div class="project-links">
+              <a href="https://lookerstudio.google.com/reporting/f74d7822-77f8-45a3-89b4-eea82c00bf71" target="_blank" class="project-btn">Buka Dashboard ➔</a>
+            </div>
           </div>
         </div>
 
-        <!-- Project 3 -->
-        <div class="project-card" data-category="ml">
-          <div>
-            <div class="project-category">AI Decision Support • Konferensi IPB</div>
-            <h3 class="project-title">Smart-Mustahik: Decision Support System for Zakat</h3>
+        <!-- Project 4: MLP vs Random Forest Breast Cancer -->
+        <div class="project-card">
+          <div class="project-thumb-wrap" onclick="openLightbox('assets/projects/proj_breast_cancer.png', 'Confusion Matrix — Klasifikasi Kanker Payudara (MLP vs Random Forest)')">
+            <img src="assets/projects/proj_breast_cancer.png" alt="Confusion Matrix MLP Klasifikasi Kanker Payudara" />
+          </div>
+          <div class="project-card-body">
+            <div class="project-meta-row">
+              <span class="project-role" style="margin-bottom:0;">Evaluasi Model Medis</span>
+              <span class="project-card-badge">Classification</span>
+            </div>
+            <h3 class="project-title">MLP vs Random Forest — Klasifikasi Kanker Payudara</h3>
             <p class="project-desc">
-              Sistem pendukung keputusan penyaluran zakat presisi menggunakan algoritma Machine Learning berbasis indikator sosio-ekonomi Had Kifayah dan QS. At-Taubah: 60.
+              Perbandingan performa Multi-Layer Perceptron dan Random Forest pada dataset Wisconsin Breast Cancer beserta heatmap korelasi, confusion matrix, dan pengujian Pytest.
             </p>
-            <div class="project-highlight">
-              🏆 <b>Publikasi:</b> Terpilih dan dipresentasikan pada ajang SERI-FEST 2026 di IPB University.
-            </div>
             <div class="project-tags">
-              <span class="tag">Machine Learning</span>
-              <span class="tag">Scikit-Learn</span>
-              <span class="tag">KTIQ</span>
-              <span class="tag">Social Analytics</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Scikit-Learn</span>
+              <span class="project-tag">MLP &amp; RF</span>
+              <span class="project-tag">Pytest</span>
             </div>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Clairineanr/smart-mustahik" target="_blank" class="project-link-btn">📦 Repositori GitHub ↗</a>
+            <div class="project-links">
+              <a href="https://github.com/Clairineanr/mlp-vs-random-forest-breast-cancer" target="_blank" class="project-btn">Lihat Repository ➔</a>
+            </div>
           </div>
         </div>
 
-        <!-- Project 4 -->
-        <div class="project-card" data-category="nlp">
-          <div>
-            <div class="project-category">NLP • First Author Academic Paper</div>
-            <h3 class="project-title">Sentiment Analysis on Folkative Instagram Reviews</h3>
+        <!-- Project 5: Multiple Linear Regression Auto MPG -->
+        <div class="project-card">
+          <div class="project-thumb-wrap" onclick="openLightbox('assets/projects/proj_auto_mpg.png', 'Plot Nilai Aktual vs Prediksi MPG — Multiple Linear Regression')">
+            <img src="assets/projects/proj_auto_mpg.png" alt="Plot Aktual vs Prediksi Regresi Auto MPG" />
+          </div>
+          <div class="project-card-body">
+            <div class="project-meta-row">
+              <span class="project-role" style="margin-bottom:0;">Pemodelan &amp; Uji Residual</span>
+              <span class="project-card-badge">Regression</span>
+            </div>
+            <h3 class="project-title">Prediksi Efisiensi Bahan Bakar (Auto MPG)</h3>
             <p class="project-desc">
-              Riset analisis sentimen opini publik terhadap unggahan media berita daring Folkative. Membangun pipeline NLP komprehensif mulai dari pembersihan teks, stopword removal, stemming, hingga Naïve Bayes.
+              Analisis pengaruh karakteristik kendaraan terhadap konsumsi bahan bakar menggunakan Multiple Linear Regression, dilengkapi plot aktual vs prediksi dan diagnostik residual.
             </p>
-            <div class="project-highlight">
-              ✍️ <b>Peran:</b> Penulis Utama (First Author) pada karya tulis ilmiah komputasional.
-            </div>
             <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">NLP</span>
-              <span class="tag">Naïve Bayes</span>
-              <span class="tag">Text Mining</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Linear Regression</span>
+              <span class="project-tag">Matplotlib</span>
+              <span class="project-tag">Pytest</span>
             </div>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Clairineanr" target="_blank" class="project-link-btn">📦 Profil Riset ↗</a>
+            <div class="project-links">
+              <a href="https://github.com/Clairineanr/multiple-linear-regression-for-fuel-efficiency-analysis" target="_blank" class="project-btn">Lihat Repository ➔</a>
+            </div>
           </div>
         </div>
 
-        <!-- Project 5 -->
-        <div class="project-card" data-category="data">
-          <div>
-            <div class="project-category">Econometrics • Statistical Modeling</div>
-            <h3 class="project-title">Multiple Linear Regression: Vehicle Fuel Efficiency</h3>
+        <!-- Project 6: Geospatial Choropleth & KDE Edinburgh -->
+        <div class="project-card">
+          <div class="project-thumb-wrap" onclick="openLightbox('assets/projects/proj_geo_edinburgh.png', 'Peta Choropleth Kepadatan Restoran Kota Edinburgh')">
+            <img src="assets/projects/proj_geo_edinburgh.png" alt="Choropleth Kepadatan Restoran Edinburgh" />
+          </div>
+          <div class="project-card-body">
+            <div class="project-meta-row">
+              <span class="project-role" style="margin-bottom:0;">Visualisasi Spasial</span>
+              <span class="project-card-badge">Geospatial EDA</span>
+            </div>
+            <h3 class="project-title">Pemetaan Spasial &amp; KDE Restoran Edinburgh</h3>
             <p class="project-desc">
-              Pemodelan ekonometrika konsumsi bahan bakar (MPG) kendaraan dengan pengujian asumsi klasik Gauss-Markov secara ketat untuk memastikan model Best Linear Unbiased Estimator (BLUE).
+              Visualisasi data geospasial tingkat kepadatan restoran di Kota Edinburgh menggunakan teknik peta choropleth, kartogram wilayah, serta Kernel Density Estimation (KDE).
             </p>
-            <div class="project-highlight">
-              📊 <b>Hasil:</b> Diagnostik multikolinearitas dengan VIF &amp; pengujian normalitas residual via Statsmodels.
-            </div>
             <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Statsmodels</span>
-              <span class="tag">Regression</span>
-              <span class="tag">EDA</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">GeoPandas</span>
+              <span class="project-tag">Choropleth</span>
+              <span class="project-tag">KDE Plot</span>
             </div>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Clairineanr/multiple-linear-regression-for-fuel-efficiency-analysis" target="_blank" class="project-link-btn">📦 Repositori GitHub ↗</a>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="project-card" data-category="app">
-          <div>
-            <div class="project-category">Backend • Web Service API</div>
-            <h3 class="project-title">FastAPI House Price Predictor</h3>
-            <p class="project-desc">
-              Implementasi RESTful API siap produksi untuk inferensi model prediksi harga properti secara real-time dengan validasi skema ketat menggunakan Pydantic v2 dan automated unit testing Pytest.
-            </p>
-            <div class="project-highlight">
-              ⚡ <b>Fitur:</b> Modular clean architecture, asynchronous endpoints, dan dokumentasi Swagger UI interaktif.
+            <div class="project-links">
+              <a href="javascript:void(0)" onclick="openLightbox('assets/projects/proj_geo_edinburgh.png', 'Peta Choropleth Kepadatan Restoran Kota Edinburgh')" class="project-btn">Lihat Peta Output ↗</a>
             </div>
-            <div class="project-tags">
-              <span class="tag">FastAPI</span>
-              <span class="tag">Pydantic v2</span>
-              <span class="tag">Pytest</span>
-              <span class="tag">REST API</span>
-            </div>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Clairineanr/fastapi-house-price-predictor" target="_blank" class="project-link-btn">📦 Repositori GitHub ↗</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Technical Skills Section -->
-  <section class="section" id="skills">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Toolkit &amp; Teknologi</div>
-        <h2 class="section-title">Keahlian Teknis</h2>
-        <p class="section-desc">Kompilasi bahasa pemrograman, library data science, dan infrastruktur komputasi.</p>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-icon">🐍</div>
-          <h4>Bahasa Pemrograman</h4>
-          <ul>
-            <li>Python (Advanced)</li>
-            <li>SQL (PostgreSQL &amp; MySQL)</li>
-            <li>R (Statistical Analysis)</li>
-            <li>Java (OOP &amp; Data Structures)</li>
-            <li>TypeScript / HTML / CSS</li>
-          </ul>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">🤖</div>
-          <h4>Machine Learning &amp; AI</h4>
-          <ul>
-            <li>Scikit-Learn</li>
-            <li>AutoKeras &amp; TensorFlow</li>
-            <li>Hyperparameter Tuning (Optuna/Grid)</li>
-            <li>NLP (Preprocessing, Naïve Bayes)</li>
-            <li>Computer Vision (OpenCV, CNN)</li>
-          </ul>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">📊</div>
-          <h4>Data &amp; Analitik</h4>
-          <ul>
-            <li>Pandas &amp; NumPy</li>
-            <li>Statsmodels (Regresi &amp; Ekonometrika)</li>
-            <li>PySpark &amp; Apache Spark (Big Data)</li>
-            <li>Matplotlib &amp; Seaborn</li>
-            <li>Looker Studio Dashboards</li>
-          </ul>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">🛠️</div>
-          <h4>Software Engineering</h4>
-          <ul>
-            <li>FastAPI &amp; RESTful API</li>
-            <li>Pydantic v2 Schema Validation</li>
-            <li>Unit Testing (Pytest)</li>
-            <li>Git &amp; GitHub Version Control</li>
-            <li>Relational Database Modeling</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Publications & Honors -->
-  <section class="section" id="publications">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Karya Ilmiah &amp; Prestasi</div>
-        <h2 class="section-title">Publikasi &amp; Kejuaraan</h2>
-        <p class="section-desc">Pencapaian akademis dan keikutsertaan dalam seminar ilmiah tingkat nasional.</p>
-      </div>
-
-      <div class="about-card" style="grid-template-columns: 1fr;">
-        <div class="edu-timeline">
-          <div class="edu-item">
-            <h4>SERI-FEST 2026 — IPB University</h4>
-            <div class="edu-sub">Karya Tulis Ilmiah Al-Qur'an (KTIQ) • Izam Rosiawan &amp; Clairine Anargya Athallah</div>
-            <p>
-              <i>"Sistem Pendukung Keputusan Penyaluran Zakat Presisi Menggunakan Analisis Machine Learning Berbasis QS. At-Taubah: 60 dan Had Kifayah"</i> — Mengombinasikan model machine learning dengan indikator kelayakan mustahik.
-            </p>
-          </div>
-
-          <div class="edu-item">
-            <h4>ISEC Gayatama — Universitas Negeri Surabaya (UNESA)</h4>
-            <div class="edu-sub">International/National Seminar Paper • Co-Author</div>
-            <p>
-              <i>"Computational Thinking as an Unplugged Pedagogical Approach in STEM Education"</i> — Meneliti pendekatan pedagogis komputasional tanpa perangkat keras untuk pemerataan pemahaman sains data.
-            </p>
-          </div>
-
-          <div class="edu-item">
-            <h4>Peserta / Finalis Kompetisi Sains Data Nasional</h4>
-            <div class="edu-sub">Data Slayer 2.0 &amp; FORTEX 5.0 (2025/2026)</div>
-            <p>
-              Mengikuti hackathon dan kompetisi data sains nasional dalam pemecahan studi kasus analitik data bisnis dan pemodelan prediktif.
-            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Call to Action & Contact -->
-  <section class="section" id="contact">
+  <!-- SECTION: HONORS, COMPETITIONS & PEKAN ILMIAH -->
+  <section class="honors-section" id="honors">
     <div class="container">
-      <div class="cta-card">
-        <h2>Siap Bekerja Sama &amp; Berkontribusi</h2>
-        <p>
-          Saya aktif mencari peluang <b>Kerja Praktik (KP) / Magang (Internship)</b> di bidang <b>Data Science, Machine Learning, atau Data Analytics</b>. Silakan hubungi saya atau unduh CV ATS untuk kualifikasi lengkap.
+      <div class="section-header-canva">
+        <h2 class="section-title-canva">HONORS, COMPETITIONS & PEKAN ILMIAH</h2>
+        <p class="section-desc-canva">
+          Beberapa kompetisi mahasiswa, penulisan karya ilmiah, dan pekan ilmiah yang pernah saya ikuti selama perkuliahan.
         </p>
+      </div>
 
-        <div class="cta-buttons">
-          <a href="./assets/CV_ATS_Clairine_Anargya.docx" download class="btn btn-primary">
-            📥 Unduh CV ATS (Word DOCX)
-          </a>
-          <a href="mailto:clairineanargya14@gmail.com" class="btn btn-secondary">
-            ✉️ Kirim Email (clairineanargya14@gmail.com)
-          </a>
-          <a href="https://www.linkedin.com/in/clairine-anargya-athallah-6915b6331/" target="_blank" class="btn btn-secondary">
-            💼 LinkedIn Profile
-          </a>
-          <a href="https://github.com/Clairineanr" target="_blank" class="btn btn-secondary">
-            🐙 GitHub @Clairineanr
-          </a>
+      <div class="honors-grid">
+        <!-- 1. SERI-FEST 2026 IPB -->
+        <div class="honor-card">
+          <span class="honor-badge-year">2026 • TINGKAT NASIONAL</span>
+          <h3 class="honor-title">SERI-FEST 2026 (KTIQ)</h3>
+          <div class="honor-inst">IPB University</div>
+          <p class="honor-desc" style="margin-bottom: 1rem;">
+            Menyusun dan mempresentasikan karya tulis ilmiah Smart-Mustahik mengenai sistem pendukung keputusan penyaluran zakat presisi berbasis indikator Had Kifayah dan machine learning.
+          </p>
+          <a href="javascript:void(0)" onclick="openLightbox('assets/certs/cert_serifest.png', 'Sertifikat SERI-FEST 2026 (KTIQ) — IPB University')" class="project-btn" style="margin-top: auto;">Lihat Sertifikat ↗</a>
+        </div>
+
+        <!-- 2. Gayatama 5 / ISEC UNESA -->
+        <div class="honor-card">
+          <span class="honor-badge-year">2026 • TINGKAT NASIONAL</span>
+          <h3 class="honor-title">Gayatama 5 (ISEC)</h3>
+          <div class="honor-inst">Universitas Negeri Surabaya (UNESA)</div>
+          <p class="honor-desc" style="margin-bottom: 1rem;">
+            Berperan sebagai co-author pada karya ilmiah mengenai penerapan metode computational thinking secara unplugged dalam pembelajaran STEM.
+          </p>
+          <a href="javascript:void(0)" onclick="openLightbox('assets/certs/cert_gayatama.png', 'Sertifikat Gayatama 5 (ISEC) — Universitas Negeri Surabaya')" class="project-btn" style="margin-top: auto;">Lihat Sertifikat ↗</a>
+        </div>
+
+        <!-- 3. Funvest 2026 STIE IBS -->
+        <div class="honor-card">
+          <span class="honor-badge-year">2026 • TINGKAT NASIONAL</span>
+          <h3 class="honor-title">Funvest 2026</h3>
+          <div class="honor-inst">STIE Indonesia Banking School (IBS)</div>
+          <p class="honor-desc" style="margin-bottom: 1rem;">
+            Mengikuti kompetisi analisis investasi bertema &ldquo;Play Your Move: Strategizing the Future of Investment&rdquo; dengan menyusun strategi portofolio berbasis data pasar.
+          </p>
+          <a href="javascript:void(0)" onclick="openLightbox('assets/certs/cert_funvest.png', 'Sertifikat Funvest 2026 — STIE Indonesia Banking School')" class="project-btn" style="margin-top: auto;">Lihat Sertifikat ↗</a>
+        </div>
+
+        <!-- 4. PIMTUS 2025 Telkom University Surabaya -->
+        <div class="honor-card">
+          <span class="honor-badge-year">2025 • TINGKAT PERGURUAN TINGGI</span>
+          <h3 class="honor-title">Pekan Ilmiah Mahasiswa (PIMTUS)</h3>
+          <div class="honor-inst">Telkom University Surabaya</div>
+          <p class="honor-desc" style="margin-bottom: 1rem;">
+            Peserta pekan ilmiah mahasiswa bertema &ldquo;Accelerating Ideas Racing Towards Innovation!&rdquo; yang diselenggarakan oleh BEM Telkom University Surabaya.
+          </p>
+          <a href="javascript:void(0)" onclick="openLightbox('assets/certs/cert_pimtus.png', 'Sertifikat PIMTUS 2025 — Telkom University Surabaya')" class="project-btn" style="margin-top: auto;">Lihat Sertifikat ↗</a>
+        </div>
+
+        <!-- 5. FORTEX 5.0 UAI -->
+        <div class="honor-card">
+          <span class="honor-badge-year">2025 • TINGKAT NASIONAL</span>
+          <h3 class="honor-title">FORTEX 5.0</h3>
+          <div class="honor-inst">Universitas Al-Azhar Indonesia (UAI)</div>
+          <p class="honor-desc" style="margin-bottom: 1rem;">
+            Mengikuti cabang Data Science Competition pada festival teknologi FORTEX 5.0 yang diselenggarakan oleh HMIF Universitas Al-Azhar Indonesia.
+          </p>
+          <a href="javascript:void(0)" onclick="openLightbox('assets/certs/cert_fortex.png', 'Sertifikat FORTEX 5.0 — Data Science Competition UAI')" class="project-btn" style="margin-top: auto;">Lihat Sertifikat ↗</a>
+        </div>
+
+        <!-- 6. Data Slayer 2.0 Tel-U Purwokerto -->
+        <div class="honor-card">
+          <span class="honor-badge-year">2024 • TINGKAT NASIONAL</span>
+          <h3 class="honor-title">Data Slayer 2.0</h3>
+          <div class="honor-inst">Telkom University Purwokerto</div>
+          <p class="honor-desc" style="margin-bottom: 1rem;">
+            Peserta kompetisi sains data nasional bertema &ldquo;Motion Matters: Human Fall Detection Classification for Safety Insights&rdquo; oleh HMSD Telkom University Purwokerto.
+          </p>
+          <a href="javascript:void(0)" onclick="openLightbox('assets/certs/cert_dataslayer.png', 'Sertifikat Data Slayer 2.0 — Telkom University Purwokerto')" class="project-btn" style="margin-top: auto;">Lihat Sertifikat ↗</a>
+        </div>
+      </div>
+
+      <!-- SUB-SECTION: PELATIHAN & SERTIFIKASI -->
+      <div style="margin-top: 4rem;">
+        <div class="section-header-canva" style="margin-bottom: 2rem;">
+          <h3 class="section-title-canva" style="font-size: clamp(1.35rem, 2.4vw, 1.8rem);">PELATIHAN &amp; SERTIFIKASI</h3>
+          <p class="section-desc-canva">
+            Sertifikat kelulusan pelatihan kecerdasan artifisial dan tata kelola data.
+          </p>
+        </div>
+
+        <div class="honors-grid">
+          <!-- Huawei 1 -->
+          <div class="honor-card">
+            <span class="honor-badge-year">2026 • HUAWEI ICT ACADEMY</span>
+            <h3 class="honor-title">Artificial Intelligence Technology and Applications</h3>
+            <div class="honor-inst">Huawei ICT Academy</div>
+            <p class="honor-desc" style="margin-bottom: 1rem;">
+              Sertifikat kelulusan kursus dan ujian resmi Huawei ICT Academy mengenai teknologi kecerdasan artifisial serta penerapannya (Kode: ICT20260924000054).
+            </p>
+            <a href="javascript:void(0)" onclick="openLightbox('assets/certs/cert_huawei_tech.png', 'Sertifikat Huawei ICT Academy — AI Technology and Applications')" class="project-btn" style="margin-top: auto;">Lihat Sertifikat ↗</a>
+          </div>
+
+          <!-- Huawei 2 -->
+          <div class="honor-card">
+            <span class="honor-badge-year">2026 • HUAWEI ICT ACADEMY</span>
+            <h3 class="honor-title">Artificial Intelligence and Applications</h3>
+            <div class="honor-inst">Huawei ICT Academy</div>
+            <p class="honor-desc" style="margin-bottom: 1rem;">
+              Sertifikat penyelesaian studi dan asesmen modul dasar hingga implementasi Artificial Intelligence di Huawei ICT Academy (Kode: ICT20260924000007).
+            </p>
+            <a href="javascript:void(0)" onclick="openLightbox('assets/certs/cert_huawei_ai.png', 'Sertifikat Huawei ICT Academy — Artificial Intelligence and Applications')" class="project-btn" style="margin-top: auto;">Lihat Sertifikat ↗</a>
+          </div>
+
+          <!-- Inixindo DAMA-DMBOK -->
+          <div class="honor-card">
+            <span class="honor-badge-year">2026 • DATA GOVERNANCE</span>
+            <h3 class="honor-title">Smart Data Governance (DAMA-DMBOK)</h3>
+            <div class="honor-inst">Inixindo Jogja</div>
+            <p class="honor-desc" style="margin-bottom: 1rem;">
+              Pelatihan implementasi kerangka tata kelola data DAMA-DMBOK dalam mendukung sistem kecerdasan artifisial yang terstandarisasi.
+            </p>
+            <a href="javascript:void(0)" onclick="openLightbox('assets/certs/cert_dama_dmbok.jpg', 'Sertifikat Inixindo Jogja — Smart Data Governance (DAMA-DMBOK)')" class="project-btn" style="margin-top: auto;">Lihat Sertifikat ↗</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- SECTION: ORGANIZATIONAL, LEADERSHIP & COMMUNITY SERVICE -->
+  <section class="org-section" id="organization">
+    <div class="container">
+      <div class="org-header-canva">
+        <div class="org-rosettes-left">
+          <img src="assets/rosette_1.png" alt="Badge 1" />
+          <img src="assets/rosette_2.png" alt="Badge 2" />
+          <img src="assets/rosette_3.png" alt="Badge 3" />
+        </div>
+        <h2 class="section-title-canva" style="margin-bottom: 0;">ORGANIZATIONAL, LEADERSHIP &amp; COMMUNITY SERVICE</h2>
+      </div>
+
+      <div class="org-grid">
+        <!-- 1. PKKMB Dewangkara Maetala 2025 -->
+        <div class="org-card">
+          <div class="org-icon-wrap" style="font-family: var(--font-mono); font-weight: 700; font-size: 0.95rem;">01</div>
+          <div class="org-content">
+            <h4>PKKMB Dewangkara Maetala 2025</h4>
+            <div class="org-role-inst">Panitia Divisi Komisi Disiplin • Telkom University Surabaya (2025)</div>
+            <p class="org-desc">
+              Bertugas dalam penegakan kedisiplinan dan ketertiban peserta selama rangkaian masa pengenalan kehidupan kampus mahasiswa baru.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. Tel-U Mudik Roadshow & Outreach -->
+        <div class="org-card">
+          <div class="org-icon-wrap" style="font-family: var(--font-mono); font-weight: 700; font-size: 0.95rem;">02</div>
+          <div class="org-content">
+            <h4>Telkom University Mudik Roadshow</h4>
+            <div class="org-role-inst">Public Speaker &amp; Duta Kampus (2025 – 2026)</div>
+            <p class="org-desc">
+              Mewakili universitas dalam sosialisasi perkuliahan serta pengenalan Program Studi Sains Data ke siswa SMA/SMK (SMKN 1 &amp; SMAN 17 Surabaya).
+            </p>
+          </div>
+        </div>
+
+        <!-- 3. Panitia Pengabdian Masyarakat 2026 -->
+        <div class="org-card">
+          <div class="org-icon-wrap" style="font-family: var(--font-mono); font-weight: 700; font-size: 0.95rem;">03</div>
+          <div class="org-content">
+            <h4>Pengabdian Masyarakat (Abdimas)</h4>
+            <div class="org-role-inst">Panitia Pelaksana • Telkom University Surabaya (2026)</div>
+            <p class="org-desc">
+              Berperan aktif sebagai panitia pelaksana dalam rangkaian program Pengabdian Masyarakat civitas akademika Telkom University Surabaya.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4. Bakti Sosial & Community Engagement SEA -->
+        <div class="org-card">
+          <div class="org-icon-wrap" style="font-family: var(--font-mono); font-weight: 700; font-size: 0.95rem;">04</div>
+          <div class="org-content">
+            <h4>Bakti Sosial &ldquo;Social and Environmental Action&rdquo; (SEA)</h4>
+            <div class="org-role-inst">Relawan Aksi Sosial &amp; Lingkungan (2026)</div>
+            <p class="org-desc">
+              Berpartisipasi dalam aksi bakti sosial kepedulian lingkungan hidup dan kegiatan pemberdayaan masyarakat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: MARI BERKOLABORASI & CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="collab-header-wrap">
+        <div class="collab-titles">
+          <span class="collab-title-serif">Mari</span>
+          <h2 class="collab-title-bold">BERKOLABORASI</h2>
+        </div>
+        <div class="collab-rosettes-right">
+          <img src="assets/rosette_1.png" alt="Badge 1" />
+          <img src="assets/rosette_2.png" alt="Badge 2" />
+          <img src="assets/rosette_3.png" alt="Badge 3" />
+        </div>
+      </div>
+
+      <div class="collab-main-grid">
+        <!-- Left: Collaboration Banner Frame from Canva -->
+        <div class="collab-banner-frame">
+          <img src="assets/collab_banner.jpg" alt="Art Collaboration Banner" />
+        </div>
+
+        <!-- Right: Contact Details (Replacing Canva placeholders with verified Clairine info) -->
+        <div class="contact-details-box">
+          <div class="contact-info-block">
+            <span class="contact-label">LOKASI & DOMISILI</span>
+            <div class="contact-value">Surabaya, Jawa Timur, Indonesia</div>
+          </div>
+
+          <div class="contact-info-block">
+            <span class="contact-label">INSTITUSI PENDIDIKAN</span>
+            <div class="contact-value">S1 Sains Data — Telkom University Surabaya</div>
+          </div>
+
+          <div class="contact-info-block">
+            <span class="contact-label">EMAIL RESMI</span>
+            <div class="contact-value">
+              <a href="mailto:clairineanargya14@gmail.com">clairineanargya14@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-info-block">
+            <span class="contact-label">JARINGAN PROFESIONAL & KODE</span>
+            <div class="contact-social-links">
+              <a href="https://www.linkedin.com/in/clairine-anargya-athallah-6915b6331/" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LinkedIn Profile
+              </a>
+              <a href="https://github.com/Clairineanr" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub Repository
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
     <div class="container">
-      <p>© 2026 Clairine Anargya Athallah. Mahasiswi S1 Sains Data Telkom University Surabaya.</p>
-      <p style="margin-top: 6px; font-size: 0.78rem;">Dirancang profesional untuk Lamaran Kerja Praktik &amp; Magang Industri.</p>
+      <p>
+        © 2026 <strong>Clairine Anargya Athallah</strong>. Dibuat berdasarkan layout template Canva resmi. Dikembangkan dengan presisi & integritas data.
+      </p>
     </div>
   </footer>
 
-  <!-- Interactive Script -->
+  <!-- LIGHTBOX MODAL FOR PROJECT OUTPUTS & LIVE WEB -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="if(event.target===this) closeLightbox()">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Tutup">×</button>
+      <img id="lightboxImg" src="" alt="Preview Output Proyek" />
+      <iframe id="lightboxFrame" class="lightbox-iframe" src="" title="Interactive Live Demo"></iframe>
+      <div class="lightbox-caption-bar">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+        <a id="lightboxExtLink" class="lightbox-external-link" href="#" target="_blank" rel="noopener noreferrer">Buka di Tab Baru ➔</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">↑</button>
+
   <script>
-    // 3D Tilt Effect on Lanyard ID Card
-    const cardWrapper = document.getElementById('idCard');
-    const container = document.querySelector('.lanyard-container');
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const frame = document.getElementById('lightboxFrame');
+      const extLink = document.getElementById('lightboxExtLink');
 
-    container.addEventListener('mousemove', (e) => {
-      const rect = cardWrapper.getBoundingClientRect();
-      const cardX = rect.left + rect.width / 2;
-      const cardY = rect.top + rect.height / 2;
-      
-      const mouseX = e.clientX - cardX;
-      const mouseY = e.clientY - cardY;
-      
-      const rotateX = (-mouseY / (rect.height / 2)) * 14;
-      const rotateY = (mouseX / (rect.width / 2)) * 14;
-      
-      cardWrapper.style.transform = `rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)`;
+      frame.style.display = 'none';
+      frame.src = '';
+      extLink.style.display = 'none';
+      img.style.display = 'inline-block';
+      img.src = src;
+
+      document.getElementById('lightboxCaption').textContent = caption || '';
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function openWebModal(url, caption) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const frame = document.getElementById('lightboxFrame');
+      const extLink = document.getElementById('lightboxExtLink');
+
+      img.style.display = 'none';
+      img.src = '';
+      frame.style.display = 'block';
+      frame.src = url;
+      extLink.style.display = 'inline-block';
+      extLink.href = url;
+
+      document.getElementById('lightboxCaption').textContent = caption || '';
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      const frame = document.getElementById('lightboxFrame');
+      modal.classList.remove('open');
+      frame.src = '';
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
     });
 
-    container.addEventListener('mouseleave', () => {
-      cardWrapper.style.transform = 'rotateX(0deg) rotateY(0deg)';
-      cardWrapper.style.transition = 'transform 0.5s ease-out';
+    // Ensure page always opens from the top on refresh
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.addEventListener('load', () => {
+      try {
+        if (window.location.hash) {
+          history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+      } catch (e) {}
+      window.scrollTo({ top: 0, behavior: 'instant' });
     });
 
-    container.addEventListener('mouseenter', () => {
-      cardWrapper.style.transition = 'transform 0.1s ease-out';
+    // Smooth scroll for in-page links without leaving #hash in URL
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        const targetId = anchor.getAttribute('href');
+        const targetEl = targetId && document.querySelector(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
     });
 
-    // Toggle Photo between Formal Photo and Tech Avatar
-    const photoImg = document.getElementById('cardPhotoImg');
-    const toggleBtn = document.getElementById('togglePhotoBtn');
-    let isIllustration = false;
+    // Mobile navigation toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.querySelector('.nav-links');
+    if (mobileBtn && navLinks) {
+      mobileBtn.addEventListener('click', () => {
+        if (navLinks.style.display === 'flex') {
+          navLinks.style.display = 'none';
+        } else {
+          navLinks.style.display = 'flex';
+          navLinks.style.flexDirection = 'column';
+          navLinks.style.position = 'absolute';
+          navLinks.style.top = '100%';
+          navLinks.style.left = '0';
+          navLinks.style.width = '100%';
+          navLinks.style.background = '#ffffff';
+          navLinks.style.padding = '1.5rem 2rem';
+          navLinks.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
+        }
+      });
+    }
 
-    toggleBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      isIllustration = !isIllustration;
-      if (isIllustration) {
-        photoImg.src = './assets/avatar.jpg';
-        toggleBtn.textContent = 'MODE FOTO FORMAL';
+    // Back to top visibility
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('visible');
       } else {
-        photoImg.src = './assets/photo.jpg';
-        toggleBtn.textContent = 'MODE ILUSTRASI';
+        backToTopBtn.classList.remove('visible');
       }
     });
 
-    // Project Category Filtering
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        
-        const filter = btn.getAttribute('data-filter');
-        projectCards.forEach(card => {
-          if (filter === 'all' || card.getAttribute('data-category') === filter) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
-        });
+    // Rosette badges interactive spin sound/visual click
+    const rosettes = document.querySelectorAll('.rosette-badge-img, .edu-rosettes-side img, .collab-rosettes-right img, .org-rosettes-left img');
+    rosettes.forEach(r => {
+      let angle = 0;
+      r.addEventListener('click', () => {
+        angle += 90;
+        r.style.transform = `rotate(${angle}deg) scale(1.15)`;
       });
     });
   </script>
-
 </body>
 </html>
